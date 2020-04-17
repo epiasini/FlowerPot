@@ -118,18 +118,17 @@ point_top = new fabric.Circle({
         left: 400,
         top: 350,
         });
- var line_top = new fabric.Path('M 65 0 Q 100, 100, 200, 0', { fill: '', stroke: 'red', objectCaching: false, strokeWidth: 5 });
 
-    line_top.path[0][1] = 150;
-    line_top.path[0][2] = 100;
+/*
+------Unflipped parabola-------
+Start: [364.03852527 210.09631317]
+Control: [400.         389.90368683]
+End: [435.96147473 210.09631317]
+*/
 
-    line_top.path[1][1] = 200;
-    line_top.path[1][2] = 400;
+var line_top = new fabric.Path('M 364 210 Q 400, 390, 436, 210', { fill: '', stroke: 'red', objectCaching: false, strokeWidth: 5 });
 
-    line_top.path[1][3] = 250;
-    line_top.path[1][4] = 100;
-
-    line_top.selectable = false;
+line_top.selectable = false;
  
     
 base_bottom = new fabric.Line([350,450,450,450],{
@@ -157,19 +156,16 @@ point_bottom = new fabric.Circle({
         left: 400,
         top: 450,
         });
-      
- var line_bottom = new fabric.Path('M 65 0 Q 100, 100, 200, 0', { fill: '', stroke: 'red', objectCaching: false, strokeWidth: 5 });
 
-    line_bottom.path[0][1] = 150;
-    line_bottom.path[0][2] = 100;
+/*
+------Flipped parabola-------
+Start: [364.03852527 589.90368683]
+Control: [400.         410.09631317]
+End: [435.96147473 589.90368683]
+*/
 
-    line_bottom.path[1][1] = 200;
-    line_bottom.path[1][2] = 400;
-
-    line_bottom.path[1][3] = 250;
-    line_bottom.path[1][4] = 100;
-
-    line_bottom.selectable = false;
+var line_bottom = new fabric.Path('M 364 590 Q 400, 410, 436, 590', { fill: '', stroke: 'red', objectCaching: false, strokeWidth: 5 });
+line_bottom.selectable = false;
 
   switch(orientation){
           case 0:
