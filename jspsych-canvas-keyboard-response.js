@@ -92,26 +92,44 @@ var ctx = document.getElementById('jspsych-canvas-keyboard-response-stimulus')
 var canvas = new fabric.Canvas('jspsych-canvas-keyboard-response-stimulus');    
       
 // THIS IS WHERE THE LINES ARE DRAW- XSTART,YSTART,XEND,YEND
+
+/*
+------Flipped base-------
+Start: [350. 350.]
+End: [450. 350.]
+*/
 base_top = new fabric.Line([350,350,450,350],{
     strokeWidth: 5,
     fill: 'red',
     stroke: 'red',
   });
 
+/*
+-----Unflipped horizontal-------
+Start: [250. 350.]
+End: [550. 350.]
+*/
 horizontal_top = new fabric.Line([250,350,550,350],{
     strokeWidth: 5,
     fill: 'red',
     stroke: 'red',
   });
 
-
-vertical_top = new fabric.Line([400,250,400,350],{
+/*
+-----Unflipped vertical-------
+Start: [400. 350.]
+End: [400. 250.]
+*/
+vertical_top = new fabric.Line([400,350,400,250],{
     strokeWidth: 5,
     fill: 'red',
     stroke: 'red',
   });
 
-    
+/*
+------Unflipped point-------
+Location: [400. 350.]
+*/
 point_top = new fabric.Circle({
         radius: 4,
         fill: 'red',
@@ -121,35 +139,50 @@ point_top = new fabric.Circle({
 
 /*
 ------Unflipped parabola-------
-Start: [364.03852527 210.09631317]
-Control: [400.         389.90368683]
-End: [435.96147473 210.09631317]
+Start: [382.01926263 305.04815658]
+Control: [400.         394.95184342]
+End: [417.98073737 305.04815658]
 */
-
-var line_top = new fabric.Path('M 364 210 Q 400, 390, 436, 210', { fill: '', stroke: 'red', objectCaching: false, strokeWidth: 5 });
-
+var line_top = new fabric.Path('M 382 305 Q 400, 395, 418, 305', { fill: '', stroke: 'red', objectCaching: false, strokeWidth: 5 });
 line_top.selectable = false;
  
-    
+/*
+------Unflipped base-------
+Start: [350. 450.]
+End: [450. 450.]
+*/
 base_bottom = new fabric.Line([350,450,450,450],{
     strokeWidth: 5,
     fill: 'red',
     stroke: 'red',
   });
 
-    
+/*
+------Flipped horizontal-------
+Start: [250. 450.]
+End: [550. 450.]
+*/
 horizontal_bottom = new fabric.Line([250,450,550,450],{
     strokeWidth: 5,
     fill: 'red',
     stroke: 'red',
   });
-    
+
+/*
+------Flipped vertical-------
+Start: [400. 450.]
+End: [400. 550.]
+*/
 vertical_bottom = new fabric.Line([400,450,400,550],{
     strokeWidth: 5,
     fill: 'red',
     stroke: 'red',
   });
-    
+
+/*
+------Flipped point-------
+Location: [400. 450.]
+*/
 point_bottom = new fabric.Circle({
         radius: 4,
         fill: 'red',
@@ -158,13 +191,12 @@ point_bottom = new fabric.Circle({
         });
 
 /*
-------Flipped parabola-------
-Start: [364.03852527 589.90368683]
-Control: [400.         410.09631317]
-End: [435.96147473 589.90368683]
+------Flipped parabola------
+Start: [382.01926263 494.95184342]
+Control: [400.         405.04815658]
+End: [417.98073737 494.95184342]
 */
-
-var line_bottom = new fabric.Path('M 364 590 Q 400, 410, 436, 590', { fill: '', stroke: 'red', objectCaching: false, strokeWidth: 5 });
+var line_bottom = new fabric.Path('M 382 495 Q 400, 405, 418, 495', { fill: '', stroke: 'red', objectCaching: false, strokeWidth: 5 });
 line_bottom.selectable = false;
 
   switch(orientation){
